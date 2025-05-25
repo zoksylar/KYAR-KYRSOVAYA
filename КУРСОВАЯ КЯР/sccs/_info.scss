@@ -1,0 +1,10 @@
+.info{
+display: flex;
+justify-content: space-between;
+gap: 66px;
+&__description{
+    font-size: 40px;
+    text-align: justify;
+}
+
+}

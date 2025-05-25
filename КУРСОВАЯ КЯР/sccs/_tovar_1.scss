@@ -1,0 +1,317 @@
+// Переменные
+$primary-color: #333;
+$accent-color: #ff5722;
+$border-color: #ddd;
+
+// Миксины
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Основные стили
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav {
+    background: $primary-color;
+    color: white;
+    padding: 1rem 0;
+    
+    .container {
+        @include flex-center;
+        justify-content: space-between;
+    }
+    
+    .nav-links {
+        a {
+            color: white;
+            margin-left: 2rem;
+            text-decoration: none;
+        }
+    }
+}
+
+.breadcrumbs {
+    padding: 1rem 0;
+    a {
+        color: #666;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.product-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.product-info {
+    h1 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+    }
+    .description {
+        margin-bottom: 2rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+    }
+}
+
+.size-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    .size-option {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+.add-to-cart {
+        background-color: #000;
+        color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+    cursor: pointer;
+        text-transform: uppercase;
+    &:hover {
+            opacity: 0.9;
+        }
+    }
+    .price {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+
+.reviews {
+    margin-top: 3rem;
+    
+    .review {
+        border-bottom: 1px solid $border-color;
+        padding: 1rem 0;
+        
+        .rating {
+            color: $accent-color;
+            font-weight: bold;
+        }
+        
+        .author {
+            color: #666;
+            margin: 0.5rem 0;
+        }
+    }
+}
+
+.contacts {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        
+        img {
+            height: 20px;
+            filter: invert(1);
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// Галерея изображений
+.product-gallery {
+    .main-image {
+        margin-bottom: 1rem;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .thumbnails {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// Секция "С этим часто заказывают"
+.related-products {
+    background-color: #f5f5f5;
+    padding: 4rem 0;
+    
+    h2 {
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .product-card {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .add-to-cart {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.3s;
+            }
+        &:hover .add-to-cart {
+            opacity: 1;
+        }
+    }
+}
+
+// Хлебные крошки
+.breadcrumbs {
+    padding: 1rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    
+    a {
+        color: #666;
+        text-decoration: none;
+        &:hover {
+            color: #000;
+        }
+    }
+    
+    span {
+        color: #000;
+    }
+}
+
+// Навигация
+.main-nav {
+    background-color: #000;
+    padding: 1rem 0;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .brand img {
+        height: 30px;
+    }
+    
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    
+    .cart-icons {
+        display: flex;
+        gap: 1rem;
+        
+        img {
+            height: 20px;
+            filter: invert(1);
+        }
+    }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+    .product-page {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-nav .nav-links {
+        display: none;
+    }
+}

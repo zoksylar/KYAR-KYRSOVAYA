@@ -1,0 +1,24 @@
+$font-family: "Raleway", sans-serif;
+.oplatadostavka{
+    &__onas{
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 28px;
+        color: #000;
+        margin-left: 203px;
+        margin-right: 203px;
+    }
+    &__POD{
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: transparent; 
+        -webkit-text-stroke: 1px #000;
+    }
+    .oplatadostavka__firstp{
+        margin-bottom: 30px;
+
+    }
+}

@@ -1,0 +1,20 @@
+.line{
+    background-color: black;
+    height: 78;
+    width: 100%;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;  
+    &__here{
+        display: flex;
+        gap: 30px;
+    }
+    &__here2{
+        display: flex;
+        gap: 30px;
+        height: 400px;
+        margin-top: 666px;
+    }
+}

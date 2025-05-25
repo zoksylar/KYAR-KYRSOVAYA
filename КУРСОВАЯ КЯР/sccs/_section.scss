@@ -1,0 +1,15 @@
+.section {
+    padding-block: 72px;
+
+    &--hiden-x {
+        overflow-x: hidden;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+}
+
